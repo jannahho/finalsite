@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Josefin+Sans:wght@400;600;700&display=swap');
+
+body{
+  background: #FFFEF9;
+  font-family: 'Alexandria', sans-serif;
+}
+
+.maincontainer{
+  display: grid;
+  grid-template-columns: .5fr 3fr 1fr;
+  grid-template-areas:
+  "title title title"
+  "longad content ads"
+  ;
+  grid-gap: 10vh;
+
+}
+
+.title{
+  grid-area: title;
+  display: grid;
+  background: #85CED8;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: .5fr 2fr .2fr 1fr .5fr;
+  grid-template-areas:
+  "blank maintitle blanke logo blanks";
+}
+
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFFEF9;
+  /* justify-self: center; */
+  align-self: center;
+  grid-area: maintitle;
+  font-size: 6vw;
+  margin-bottom: 29vh;
+}
+
+.title > p{
+    grid-area: maintitle;
+    justify-self: center;
+    align-self: center;
+    font-size: 2vw;
+    color: #FFFEF9;
+    margin-top: 25vh;
+    text-align: justify;
+}
+
+.logo{
+  height: 20vw;
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
+
+#userinputdiv{
+  grid-area: title;
+  display: grid;
+  margin: auto;
+  background-color: #d3d3d3;
+  width: 70vw;
+  height: 70vh;
+  padding: 2%;
+  font-size: 2.5vw;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  /* animation: none;
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+    } */
+}
+
+.categoryinput{
+  justify-self: start;
+}
+
+
+#errormessage{
+  font-size: 1vw;
+  color: grey;
+  justify-self: center;
+}
+
+#submitbutton{
+  width: 12vw;
+  height: 4vh;
+  margin: auto;
+  justify-self: center;
+  align-self: end;
+}
+
+.allcontent{
+  grid-area: content;
+  display: grid;
+  grid-gap: 10vh;
+}
+
+#videoad{
+  
+  margin: auto;
+  width: 80vw;
+  position: absolute;
+  display: none;
+  z-index: 2;
+}
+
+.contentblock{
+  display: grid;
+}
+
+.content{
+  padding: 0 2vw;
+  display: none;
+  overflow: hidden;
+  background-color: none;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.headerbutton{
+  background-color: #FFFEF9;
+  /* color: #444; */
+  cursor: pointer;
+  padding: 1vw;
+  width: 100%;
+  /* max-height: 5vw; */
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 2.5vw;
+  font-family: 'Alexandria', sans-serif;
+}
+
+.headerbutton:after {
+  content: '\02795'; /* Unicode character for (+) sign  from w#schools */
+  font-size: 2vw;
+  color: white;
+  float: right;
+  /* margin-left: 3vw; */
+}
+
+.active, .headerbutton:hover {
+  background-color: #85CED8;
+  /* color: white; */
+}
+
+.active:after {
+  content: "\2796";
+
+}
+
+.contentpar{
+  font-size: 1.3vw;
+  /* filter: blur(3px);
+      -webkit-filter: blur(4px); */
+}
+
+/* .contentpar:hover{
+  filter: none;
+} */
+
+.rightads{
+  grid-area: ads;
+  display: grid;
+  grid-gap: 7vh;
+}
+
+.ad{
+  width: 90%;
+}
+
+.leftads{
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  grid-area: longad;
+  display: grid;
+  grid-gap: 5vh;
+}
+
+h2{
+  font-size: 1.5vw;
+}
+
+.subhead{
+  font-weight: bold;
+  font-size: 1.5vw;
+
+}
