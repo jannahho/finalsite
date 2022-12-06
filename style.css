@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Josefin+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Crimson+Text&family=Josefin+Sans:wght@400;600;700&display=swap');
 
 body{
   background: #FFFEF9;
@@ -59,10 +59,12 @@ h1{
   display: grid;
   margin: auto;
   background-color: #d3d3d3;
-  width: 70vw;
-  height: 70vh;
-  padding: 2%;
-  font-size: 2.5vw;
+  width: 60vw;
+  height: 60vh;
+  padding: 3%;
+  font-family: 'Crimson Text', serif;
+  font-size: 2vw;
+  line-height: 1vh;
   /* display: none; */
   visibility: hidden;
   opacity: 0;
@@ -78,9 +80,28 @@ h1{
     } */
 }
 
+#userinputdiv>p{
+    justify-self: center;
+}
+
+#birthdayinput>label{
+    font-size: 1vw;
+}
+
 .categoryinput{
   justify-self: start;
+  margin-bottom: .8vw;
 }
+
+#nameinput{
+    display: inline-block;
+}
+/*
+#namebox{
+    margin-top: -1vw;
+    float: left;
+    display: inline-block;
+} */
 
 
 #errormessage{
