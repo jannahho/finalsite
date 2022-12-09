@@ -1,9 +1,5 @@
-// let politicalPreference = null;
-//
-// let politicalJSON = {
-//   'liberal': 'videolink.mp4',
-//   'conservative': 'alternativevideolink.mp4'
-// }
+let popoverContainerElement = document.getElementById("popoverContainer");
+
 let inputDiv = document.getElementById("userinputdiv");
 document.addEventListener("DOMContentLoaded", function() {
     appear();
@@ -238,25 +234,7 @@ function targetAds() {
     }
 }
 
-// function wait(ms){
-//    var start = new Date().getTime();
-//    var end = start;
-//    while(end < start + ms) {
-//      end = new Date().getTime();
-//   }
-// }
 
-// function submitData() {
-//   let age = document.getElementById("textEntryBox1").text;
-//   politicalPreference = document.getElementById("politicalPreferenceBox").value;
-// }
-
-// let video1 = "https://www.w3schools.com/html/mov_bbb.mp4"
-// let video2 = "alfred.mov"
-// let video3 = "https://www.w3schools.com/html/mov_bbb.mp4"
-// let video4 = "https://www.w3schools.com/html/mov_bbb.mp4"
-//
-// let videoAds = [video1, video2, video3, video4];
 
 let videoList = [];
 
@@ -295,11 +273,12 @@ for (i = 0; i < headerButton.length; i++) {
             videoAd.src = videoList[videoToWatch];
 
             videoAd.style.display = "block";
+            /* Also the popover container */
+            popoverContainerElement.style.display = "block";
             videoAd.pause();
             videoAd.currentTime = 0;
             videoAd.load();
 
-            window.scroll(0, 9);
 
             document.addEventListener('wheel', preventScroll, {
                 passive: false
@@ -314,14 +293,13 @@ for (i = 0; i < headerButton.length; i++) {
 
             videoAd.addEventListener('ended', e => {
                 videoAd.style.display = "none";
+                /* Also the popover container */
+                popoverContainerElement.style.display = "none";
                 videoIsPlayingCurrently = false;
             });
         }
         hasHeaderBeenClicked[this.id] = true;
 
-        // window.open("https://www.w3schools.com/html/mov_bbb.mp4");
-        // alert('Your webpage will resume after the video has finished playing.');
-        // wait(10000);
 
         this.classList.toggle("active");
         var content = this.nextElementSibling;

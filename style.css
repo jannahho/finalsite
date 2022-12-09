@@ -5,6 +5,30 @@ body{
   font-family: 'Alexandria', sans-serif;
 }
 
+body, html {
+  padding: 0px;
+  margin: 0px;
+}
+
+#popoverContainer {
+  background-color: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: +99;
+  display: none;
+}
+
+#popoverFlexer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .maincontainer{
   display: grid;
   grid-template-columns: .5fr 3fr 1fr;
@@ -65,19 +89,10 @@ h1{
   font-family: 'Crimson Text', serif;
   font-size: 2vw;
   line-height: 1vh;
-  /* display: none; */
   visibility: hidden;
   opacity: 0;
   transition: opacity 1s ease-out;
-  /* animation: none;
-  @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-    } */
+
 }
 
 #userinputdiv>p{
@@ -96,12 +111,6 @@ h1{
 #nameinput{
     display: inline-block;
 }
-/*
-#namebox{
-    margin-top: -1vw;
-    float: left;
-    display: inline-block;
-} */
 
 
 #errormessage{
@@ -166,12 +175,11 @@ h1{
   font-size: 2vw;
   color: white;
   float: right;
-  /* margin-left: 3vw; */
 }
 
 .active, .headerbutton:hover {
   background-color: #85CED8;
-  /* color: white; */
+
 }
 
 .active:after {
@@ -197,9 +205,6 @@ h1{
   margin-left: 2vw;
 }
 
-/* .contentpar:hover{
-  filter: none;
-} */
 
 .rightads{
   grid-area: ads;
